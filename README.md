@@ -1,5 +1,7 @@
 # weather-dashboard
 
+# new branch: fetch-test in order to test google api
+
 Questions/Research topics:
 
 -How to parse/retrieve items from a JSON object?
