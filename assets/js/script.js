@@ -101,6 +101,7 @@ $("#citySearch").on("keyup", function (e) {
         return response.json();
       })
       .then(function (data) {
+        console.log(data);
         document.getElementById("temperature-current").textContent =
           data.current.temp;
         document.getElementById("humidity-current").textContent =
