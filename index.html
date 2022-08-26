@@ -17,7 +17,6 @@
     <div class="jumbotron justify-content-center">
       <h1 class="display-4">Weather Dashboard</h1>
       <hr class="my-4" />
-      <p id="displayDate"></p>
     </div>
     <div class="row">
       <div class="input-group mb-3 col-3">
@@ -28,24 +27,15 @@
           placeholder="Search for a city"
           aria-label="Sizing example input"
           aria-describedby="inputGroup-sizing-default"
+          id="citySearch"
         />
       </div>
       <p class="col-8" id="clock"></p>
     </div>
 
     <div class="row">
-      <div class="list-group col-3">
-        <a
-          href="#"
-          class="list-group-item list-group-item-action active"
-          aria-current="true"
-        >
-          City 1
-        </a>
-        <a href="#" class="list-group-item list-group-item-action">City 2</a>
-        <a href="#" class="list-group-item list-group-item-action">City 3</a>
-        <a href="#" class="list-group-item list-group-item-action">City 4</a>
-        <a class="list-group-item list-group-item-action disabled">City 5</a>
+      <div class="list-group col-3 history">
+        <!-- City buttons are added here -->
       </div>
       <div class="accordion col-8" id="accordionExample">
         <div class="card">
@@ -72,13 +62,15 @@
           >
             <div class="card-body">
               <ul>
-                <li>City Name</li>
-                <li>Date</li>
-                <li>Icon</li>
-                <li>Temp</li>
-                <li>Humidity</li>
-                <li>Wind speed</li>
-                <li>UV index</li>
+                <li id="city-name-current">City Name</li>
+                <li id="date-current">Date</li>
+                <li id="icon-current">Icon</li>
+                <li id="temperature-current">Temp</li>
+                <li id="humidity-current">Humidity</li>
+                <li id="wind-speed-current">Wind speed</li>
+                <li class="badge badge-danger" id="uv-index-current">
+                  UV index
+                </li>
               </ul>
             </div>
           </div>
@@ -106,13 +98,15 @@
           >
             <div class="card-body">
               <ul>
-                <li>City Name</li>
+                <li id="city-name-future">City Name</li>
                 <li>Date</li>
                 <li>Icon</li>
-                <li>Temp</li>
+                <li id="temperature-future">Temp</li>
                 <li>Humidity</li>
                 <li>Wind speed</li>
-                <li>UV index</li>
+                <li class="badge badge-success" id="uv-index-green">
+                  UV index
+                </li>
               </ul>
             </div>
           </div>

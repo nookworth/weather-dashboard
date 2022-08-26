@@ -1,18 +1,31 @@
 .jumbotron {
-    text-align: center;
-    background-color: transparent;
-    color: black;
-    border-radius: 0;
-    border-bottom: 10px solid black;
-  }
+  text-align: center;
+  background-color: transparent;
+  color: black;
+  border-radius: 0;
+  border-bottom: 10px solid black;
+}
 
 #clock {
-    text-align: center;
-    font-size: x-large;
-    border: 2px dashed lightgreen;
-}  
+  text-align: center;
+  font-size: x-large;
+}
 
 p a {
-    display: flex;
-    text-align: center;
+  display: flex;
+  text-align: center;
+}
+
+#uv-index-green:hover::after {
+  position: absolute;
+  left: 0;
+  top: 24px;
+  min-width: 200px;
+  border: 1px #aaaaaa solid;
+  border-radius: 10px;
+  background-color: #ffffcc;
+  padding: 12px;
+  color: #000000;
+  font-size: 14px;
+  z-index: 1;
 }
